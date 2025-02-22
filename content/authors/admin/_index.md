@@ -80,5 +80,5 @@ email: ''
 highlight_name: true
 ---
 
-I'm a PhD student at the [Faculty of Computational Mathematics and Cybernetics](https://cs.msu.ru/en) of [Lomonosov Moscow State University](https://www.msu.ru/en/). My area of focus includes dealing with threats like image trojan backdoor attacks, prompt injections, prompt stealing for text-to-image models. In addition to my ML safety research. I have also extensively worked with diffusion Models, participating in projects involving face artifact restoration and zero-shot personalization for faces.
+I'm a PhD student at the [Faculty of Computational Mathematics and Cybernetics](https://cs.msu.ru/en) of [Lomonosov Moscow State University](https://www.msu.ru/en/). My research interests include AI-safety in Large Language Models and Computer Vision.
 {style="text-align: justify;"}

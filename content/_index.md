@@ -23,12 +23,16 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
+        - title: AI Research Engineer
+          company: Startup (Non-disclosure agreement)
+          date_start: '2024-02-01'
+          date_end: ''
         - title: Machine Learning Engineer
           company: Viasat
           company_url: 'https://www.viju.ru/'
           company_logo: viju
           date_start: '2021-09-01'
-          date_end: ''
+          date_end: '2024-02-01'
           description: |2-
               Responsibilities include:
               * Developed a highlights extraction method for the video preview (Pytorch, OpenCV, ffmpeg)
@@ -41,8 +45,8 @@ sections:
           company: ods.ai
           company_url: 'https://ods.ai/'
           company_logo: ods
-          date_start: '2020-06-01'
-          date_end: '2022-03-01'
+          date_start: '2020-01-01'
+          date_end: '2022-06-01'
           description: |2-
               Responsibilities include:
               * Created a data science competition pipeline for evaluating solutions in a Docker environment (Python,
@@ -54,7 +58,7 @@ sections:
           company_url: 'https://www.nsi.ru/'
           company_logo: nsi
           date_start: '2020-06-01'
-          date_end: '2022-03-01'
+          date_end: '2022-02-01'
           description: |2-
               Responsibilities include:
               * Developed a comprehensive MRI image analysis tool composed of multiple models for explaining images and
@@ -65,7 +69,7 @@ sections:
           company_url: 'https://www.trendmd.com/'
           company_logo: trendmd
           date_start: '2019-09-01'
-          date_end: '2022-09-01'
+          date_end: '2021-09-01'
           description: |2-
               Responsibilities include:
               * Developed a recommendation system pipeline for suggesting medical articles (Python, Spark, Pytorch,
@@ -78,6 +82,33 @@ sections:
               strategies (Python, Thompson Sampling, UCB)
     design:
       columns: '2'
+  - block: experience
+    content:
+      title: Teaching
+      date_format: Jan 2006
+      items:
+        - title: Teaching Assistant
+          company: Lomonosov Moscow State University
+          company_url: 'https://www.msu.ru/'
+          company_logo: msu
+          date_start: '2021-09-01'
+          date_end: ''
+          description: |2-
+              Responsibilities include:
+              * Teaching a course on Robust Machine Learning
+              * Supervising students' research projects
+    design:
+      columns: '2'
+  - block: collection
+    id: talks
+    content:
+      title: Recent & Upcoming Talks
+      filters:
+        folders:
+          - event
+    design:
+      columns: '2'
+      view: compact
   - block: contact
     id: contact
     content:
