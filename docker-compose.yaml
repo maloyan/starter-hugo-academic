@@ -1,36 +1,30 @@
+version: "3"
 services:
   hugo:
-    image: jakejarvis/hugo-extended:latest
+    build: .
+    ports:
+      - "1313:80"
     volumes:
-      - ./:/src
-    command: server --buildDrafts --buildFuture --bind 0.0.0.0
+      - ./:/usr/share/nginx/html
+    restart: unless-stopped
     networks:
       - cloudflared
-    restart: unless-stopped
-    dns:
-      - 1.1.1.1
-      - 1.0.0.1
-    deploy:
-        resources:
-            limits:
-              cpus: '0.5'
-              memory: 500M
+
   tunnel:
-    container_name: cloudflared-tunnel-hugo
+    container_name: cloudflared-tunnel-web
     image: cloudflare/cloudflared
     env_file:
-        - .env
-    restart: unless-stopped
+      - .env
     command: tunnel run
     environment:
       - TUNNEL_TOKEN=${CF_TOKEN}
+    dns:
+      - 1.1.1.1
+      - 1.0.0.1
+    restart: unless-stopped
     networks:
       - cloudflared
-    deploy:
-        resources:
-            limits:
-              cpus: '0.5'
-              memory: 500M
+
 networks:
-    cloudflared:
-        driver: bridge
+  cloudflared:
+    driver: bridge
